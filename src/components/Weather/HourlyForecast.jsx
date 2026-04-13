@@ -18,7 +18,7 @@ const HourCard = memo(function HourCard({ time, code, temp, symbol, index }) {
   );
 });
 
-e
+
 const DaySelector = memo(function DaySelector({ selectedDay, onSelect, daily }) {
   const [open, setOpen] = useState(false);
   const ref = useRef(null);
