@@ -18,12 +18,12 @@ const HourCard = memo(function HourCard({ time, code, temp, symbol, index }) {
   );
 });
 
-// Day selector dropdown — state colocated here
+e
 const DaySelector = memo(function DaySelector({ selectedDay, onSelect, daily }) {
   const [open, setOpen] = useState(false);
   const ref = useRef(null);
 
-  // Derive day names from actual forecast dates
+  
   const dayNames = useMemo(() =>
     daily?.time?.map((d) =>
       new Date(d).toLocaleDateString('en-US', { weekday: 'long' })

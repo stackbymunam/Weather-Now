@@ -28,7 +28,7 @@ const UnitsDropdown = memo(function UnitsDropdown() {
   const ref = useRef(null);
   const { units, setTemperature, setWind, setPrecipitation } = useUnits();
 
-  // Close on outside click
+
   useEffect(() => {
     const handler = (e) => {
       if (ref.current && !ref.current.contains(e.target)) setOpen(false);
@@ -43,7 +43,7 @@ const UnitsDropdown = memo(function UnitsDropdown() {
   const handleWind = useCallback((val) => { setWind(val); setOpen(false); }, [setWind]);
   const handlePrecip = useCallback((val) => { setPrecipitation(val); setOpen(false); }, [setPrecipitation]);
 
-  // Derived: label for the toggle button
+
   const unitLabel = units.temperature === 'imperial' ? '°F · mph' : '°C · km/h';
 
   return (

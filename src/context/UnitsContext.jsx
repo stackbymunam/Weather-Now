@@ -3,9 +3,9 @@ import { createContext, useContext, useState, useCallback } from 'react';
 const UnitsContext = createContext(null);
 
 const DEFAULT_UNITS = {
-  temperature: 'metric',   // 'metric' | 'imperial'
-  wind: 'kmh',             // 'kmh' | 'mph'
-  precipitation: 'mm',     // 'mm' | 'in'
+  temperature: 'metric',   
+  wind: 'kmh',             
+  precipitation: 'mm',     
 };
 
 export function UnitsProvider({ children }) {

@@ -7,7 +7,7 @@ import { getWeatherInfo } from '../../utils/weatherIcons';
 const CurrentWeather = memo(function CurrentWeather({ current, meta }) {
   const { units } = useUnits();
 
-  // Derived state — recomputed only when deps change
+  
   const temp = useMemo(
     () => fmtTemp(toTemp(current.temperature_2m, units.temperature)),
     [current.temperature_2m, units.temperature]
@@ -36,7 +36,7 @@ const CurrentWeather = memo(function CurrentWeather({ current, meta }) {
         border: '1px solid rgba(255,255,255,0.08)',
       }}
     >
-      {/* Decorative blob */}
+     
       <div
         className="absolute -top-12 -right-12 w-52 h-52 rounded-full opacity-10 pointer-events-none"
         style={{ background: 'radial-gradient(circle, hsl(248,80%,65%), transparent 70%)' }}

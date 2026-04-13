@@ -1,7 +1,4 @@
-/**
- * Maps WMO weather interpretation codes to display data.
- * https://open-meteo.com/en/docs#weathervariables
- */
+
 const CODE_MAP = {
   0:  { emoji: '☀️',  label: 'Clear sky' },
   1:  { emoji: '🌤️', label: 'Mainly clear' },

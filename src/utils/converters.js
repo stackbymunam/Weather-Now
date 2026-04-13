@@ -1,12 +1,12 @@
-/** Convert °C → °F if unit is 'imperial', otherwise return as-is */
+
 export const toTemp = (celsius, unit) =>
   unit === 'imperial' ? (celsius * 9) / 5 + 32 : celsius;
 
-/** Convert km/h → mph if unit is 'mph', otherwise return as-is */
+
 export const toWind = (kmh, unit) =>
   unit === 'mph' ? kmh / 1.609 : kmh;
 
-/** Convert mm → in if unit is 'in', otherwise return as-is */
+
 export const toPrecip = (mm, unit) =>
   unit === 'in' ? mm / 25.4 : mm;
 

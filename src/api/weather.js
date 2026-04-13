@@ -1,10 +1,7 @@
 const GEO_BASE = 'https://geocoding-api.open-meteo.com/v1';
 const WEATHER_BASE = 'https://api.open-meteo.com/v1';
 
-/**
- * Fetch geo coordinates + name from a city string.
- * Returns the top result or throws if none found.
- */
+
 export async function geocodeCity(city) {
   const res = await fetch(`${GEO_BASE}/search?name=${encodeURIComponent(city)}&count=5`);
   if (!res.ok) throw new Error('Geocoding request failed');
@@ -13,10 +10,7 @@ export async function geocodeCity(city) {
   return data.results; // return all for autocomplete
 }
 
-/**
- * Fetch full weather data for a lat/lon.
- * Always fetches in metric / kmh / mm — unit conversion is done client-side.
- */
+
 export async function fetchWeatherData({ latitude, longitude }) {
   const params = new URLSearchParams({
     latitude,

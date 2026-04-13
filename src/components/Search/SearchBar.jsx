@@ -8,7 +8,7 @@ const SearchIcon = () => (
 );
 
 const SearchBar = memo(function SearchBar({ onSearch, isLoading }) {
-  // City input state is colocated here — no need to lift until submitted
+  
   const [value, setValue] = useState('');
   const inputRef = useRef(null);
 

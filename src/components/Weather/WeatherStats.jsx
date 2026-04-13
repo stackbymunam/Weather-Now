@@ -23,7 +23,7 @@ const StatCard = memo(function StatCard({ icon, label, value, className = '' }) 
 const WeatherStats = memo(function WeatherStats({ current }) {
   const { units } = useUnits();
 
-  // All derived — recompute only if current data or units change
+  
   const stats = useMemo(() => {
     const tSym = tempSymbol(units.temperature);
     const wSym = windSymbol(units.wind);
