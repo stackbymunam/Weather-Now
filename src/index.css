@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+  body {
+    background-color: hsl(243, 96%, 9%);
+    color: white;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    min-height: 100vh;
+  }
+  ::-webkit-scrollbar { width: 4px; height: 4px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: hsl(243,23%,34%); border-radius: 4px; }
+}
+
+@layer utilities {
+  .glass {
+    background: rgba(255,255,255,0.04);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.07);
+  }
+  .stagger-1 { animation-delay: 0.05s; opacity:0; }
+  .stagger-2 { animation-delay: 0.10s; opacity:0; }
+  .stagger-3 { animation-delay: 0.15s; opacity:0; }
+  .stagger-4 { animation-delay: 0.20s; opacity:0; }
+  .stagger-5 { animation-delay: 0.25s; opacity:0; }
+  .stagger-6 { animation-delay: 0.30s; opacity:0; }
+  .stagger-7 { animation-delay: 0.35s; opacity:0; }
+  .stagger-8 { animation-delay: 0.40s; opacity:0; }
+}
